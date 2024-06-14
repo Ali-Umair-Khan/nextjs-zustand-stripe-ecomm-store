@@ -1,0 +1,74 @@
+
+
+
+
+.navbar{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    gap:1rem;
+    padding:1.5rem 2rem;
+    .navbar__left{
+        display:flex;
+        // justify-content:space-evenly;
+        align-items:center;
+        gap:1rem;
+            .navbar__left-image{
+                width: 5rem; /* Adjust the width as needed */
+                height:5rem;
+                border: 1px solid #ddd; /* Border color */
+                display:block;
+                border-radius: 50%; /*3px Rounded corners */
+                overflow: hidden; /* Hide any overflowing content */
+                object-fit:contain; /* Resize the content to cover the container */
+                background-size:130%; /* Similar effect as object-fit: cover */
+                // margin-top:-1rem;
+                img{
+                    object-fit: cover; /* Resize the content to cover the container */
+                    object-position: end center; /* Center the image both horizontally and vertically */
+                    margin-top:1rem;
+                    // height:5rem;
+                }
+            }
+            h2{
+                font-weight:350;
+                font-size:1.4rem;
+            }
+        }
+    
+    .navbar__right {
+        
+        ul {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:1rem;
+            list-style-type: none;
+            li {
+                margin:1.5rem 1rem;
+                padding:1rem;
+                color:#041dc1;
+                text-decoration:none;
+                font-size:1.6rem;
+                text-align:center;
+                // background-color: #eee;
+                font-weight:400;
+                transition: all 1s ease-in 0.5s;
+                &:hover{
+                    color:rgb(3, 70, 146);
+                    // background-color:#e4f5fa;
+                    font-weight:500;
+                    border-bottom : 2px solid #02114f;
+                }
+                // a{
+                    // transition: all 1s ease-in 2s;
+                    // &:hover{
+                    //     // border-bottom:2rem;
+                    //     // text-decoration: underline;
+                    // }
+                // }
+            }
+        }
+    }
+
+}

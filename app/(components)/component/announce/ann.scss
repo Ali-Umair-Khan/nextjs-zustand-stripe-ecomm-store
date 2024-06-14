@@ -1,0 +1,61 @@
+
+.ann{
+    background-color:rgb(2, 2, 81);
+    background-image: url("/bannerj.jpg");
+    // background-image: url('https://assets-global.website-files.com/5bddf05…/64639ea…_Cta-BG.webp');
+    // background-color:rgb(2, 2, 81);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width:99vw;
+    min-height:5rem;
+    display:flex;
+    // flex-direction:column;
+    justify-content:center;
+    place-items:center;
+    row-gap: 1rem;
+    .ann__h1{
+        color:rgb(255, 254, 254);
+        padding:1rem 1.25rem;
+        font-family: var(--font-family-3);
+        font-size:1.6rem;
+        font-style: italic;
+        font-weight:200;
+        @media (max-width:30rem){
+            padding:0.5rem 0.5rem;
+            font-size:1.2rem;
+            justify-self: flex-start;
+        }
+    }
+    .ann__btn{
+        background-color: white;
+        color:black;
+        border-radius:2rem;
+        padding:0.5rem;
+        width:max-content;
+        // border: 2px solid none;
+        border: 0 solid transparent;
+        font-weight:400;
+        cursor:pointer;
+        animation: moveX 2s linear infinite;
+        @keyframes moveX {
+            0% {
+                transform:translateX(0);
+            }
+            100%{
+                transform:translateX(-0.01rem)
+            }
+        }
+        &:hover {
+            background-color:black;
+            color:white;
+            // animation: moveY 2s linear infinite;
+        }
+        @media (max-width:70rem){
+            padding:0.5rem;
+            font-size:1.1rem;
+            justify-self: flex-start;
+            width:max-content;
+        }
+    }
+}

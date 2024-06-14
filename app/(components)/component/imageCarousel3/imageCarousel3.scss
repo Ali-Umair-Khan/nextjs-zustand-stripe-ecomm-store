@@ -1,0 +1,107 @@
+// Define styles for the main container of the image carousel
+.slider {
+  // Set the height of the carousel to 90% of the viewport height and center it horizontally
+  // height: 90vh;
+  // margin: 0 auto;
+  // Set the container as a relative position
+  position: relative;
+  // Set the width of the carousel to 90% of the parent container
+  max-width: 99vw;
+  // Use grid layout and center the content both vertically and horizontally
+  display: grid;
+  place-items: center; 
+  height:100vh;
+  // transform: translateZ(0);
+  @media (max-width:70rem){
+    // margin:0 auto;
+    width:99vw;
+    overflow-x:hidden;
+
+  }
+
+
+  // Uncomment the following lines to add gradient overlays on the sides of the carousel
+  // &::before, &::after {
+  //   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  //   content: "";
+  //   height: 100%;
+  //   position: absolute;
+  //   width: 15%;
+  //   z-index: 2;
+  // }
+  // &::before {
+  //   left: 0;
+  //   top: 0;
+  // }
+  // &::after {
+  //   right: 0;
+  //   top: 0;
+  //   transform: rotateZ(180deg);
+  // }
+
+  // Define styles for the container of the image slides
+  .slider__track {
+    // Use flex display for the horizontal arrangement of slides
+    display: flex;
+    // Set the width to accommodate all slides (45rem wide each, 11 slides in total)
+    // width: calc(45rem * 2);
+    width:100%;
+    height: 110vh;
+    // Apply a scrolling animation to create a continuous loop effect
+    animation: scroll 24s linear infinite;
+    will-change: transform;
+
+    // Define the scrolling animation
+    // Define a keyframe animation named "scroll"
+  @keyframes scroll {
+    // Define the starting state of the animation (0%)
+    0% {
+      // Initial state: no horizontal translation
+      transform: translateX(0%);
+    }
+
+    // Define the ending state of the animation (100%)
+    100% {
+      // Translate the entire slider horizontally by the equivalent of 80rem multiplied by 5 to the left
+      // This creates a scrolling effect moving through 11 slides (each 45vw wide) in a continuous loop
+      transform: translateX(-84rem * 6);
+    }
+  }
+
+    // Define styles for each individual slide
+    .slider__track-slide {
+      // Set the height of each slide to 100% of the parent container
+      height: 100vh;
+      // Set the width of each slide to 45% of the viewport width
+      width: 30vw;
+      // Use flex display for the internal arrangement of content within each slide
+      display: flex;
+      // Add padding around each slide
+      // padding: 1.5rem;
+      // Add margin between slides
+      // margin-inline: 5rem;
+      // Apply perspective to create a 3D effect on each slide
+      perspective: 10rem;
+      @media (max-width:70rem){
+        width:90vw;
+      }
+
+      // Style the image inside each slide
+      img {
+        image-rendering: optimizeQuality; /* or pixelated */
+        object-fit:contain;
+        object-position:center;
+        // background-size: cover;
+        // Set the width of the image to 100% of its container
+        width: 100%;
+        height:100vh;
+        // Apply a transition effect on hover
+        transition: transform 1s;
+        // Add a 3D effect on hover
+        &:hover {
+          transform: translateZ(2rem);
+        }
+      }
+    }
+  }
+}

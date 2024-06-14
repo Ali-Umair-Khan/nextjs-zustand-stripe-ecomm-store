@@ -16,6 +16,10 @@
   }
 }
 
+*{
+  transition-duration: 200ms;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,3 +29,79 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Satisfy&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Inline+One&family=Anton&family=Quicksand:wght@300;400&family=Satisfy&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Display:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Display:ital,wght@0,200;0,300;0,400;0,500;1,100;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Didact+Gothic&display=swap');
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+  :root{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font-family-1: 'Abril Fatface', serif;
+    --font-family-2:  'Satisfy', sans-serif;
+    --font-family-3: 'Oxygen', Quicksand;
+    --font-family-4: 'Quicksand', sans-serif;
+    --font-family-5: 'Satisfy', cursive;
+    --font-family-6: 'Sedgwick Ave Display', cursive;
+    --font-italic: 'Edu TAS Beginner', Quicksand;
+    --font-family-7:'Noto Sans Display', Oxygen;
+    --font-logo: "Montserrat Alternates",Oxygen;
+    --font-bungee: "Bungee Spice", sans-serif;
+    --font-family-thin: "Didact Gothic", sans-serif;
+    --font-family-thinner: "Comic Neue", Oxygen;
+
+    --color-1 : rgba(5, 64, 159, 0.9);
+    }
+  
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1.6;
+    /* margin: 0 auto; */
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family:var(--font-family-4);
+    --color-blue: #29d;
+    --color-green: #50C878;
+    max-width:150rem;
+    margin:0 auto;
+    /* vertical-align: baseline; */
+    /* background-color:var(--color-green); */
+  
+  }
+
+  body {
+    /* font-family: --font-primary; */
+    font-family: var(--font-family-4);
+    color: --color-grey-dark-2;
+    color: --color-grey-light-1;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0 auto;
+    background-color: white;
+    overflow-x: hidden;
+  }
+  
+    img{
+      width:100%;
+      height:auto;
+      }
+      
+
+      .flexRow{
+        display:flex;
+        place-items:center;
+        place-content:center;
+      }

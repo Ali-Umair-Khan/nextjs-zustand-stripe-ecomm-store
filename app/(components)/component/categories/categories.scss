@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    height:100vh;
+    .image-container {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        transition: flex 0.3s;
+        cursor:pointer;
+        img {
+            display: block;
+            width: 100%;
+            height:100%;
+            transition: transform 0.3s;
+            object-fit:cover;
+            object-position: center;
+            cursor:pointer;
+        }
+        &:hover img {
+            transform: scale(1.005);
+            // object-fit:contain;
+            object-position:center;
+            // flex:50%;
+        }
+        &:hover {
+            flex: 0 0 80%;
+            object-fit:cover;
+            object-position:center;
+            background-size: cover;
+        }
+        &:hover .text {
+            opacity: 1;
+        }
+        .text {
+            position: absolute;
+            top: 3rem;
+            left: 4rem;
+            right: 1rem;
+            // background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(136, 80, 15);
+            padding: 1rem;
+            margin:1rem;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1.6rem;
+            height: 100%;
+            &__brand{
+                font-size:2.4rem;
+                text-transform:uppercase;
+                font-weight: 800;
+            }
+            &__stylist{
+                font-size: 1.8rem;
+                font-style: italic;
+            }
+            &__price{
+                font-size:1.4rem;
+            }
+            &__more{
+                background-color: transparent;
+                border: 1px solid transparent;
+                color:rgb(237, 233, 223);
+                font-size:1.6rem;
+                cursor:pointer;
+                padding-bottom:1.5rem;
+                &:hover{
+                    text-decoration:underline;
+                    color:black;
+                }
+            }
+          }
+      }
+  }
+  
+//   .image-container {
+//     position: relative;
+//     flex: 1;
+//     overflow: hidden;
+//   }
+  
+//   img {
+//     display: block;
+//     width: 100%;
+//     transition: transform 0.3s;
+//   }
+  
+//   .image-container:hover img {
+//     transform: scale(1.5);
+//   }
+  
+//   .text {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     color: white;
+//     padding: 5px;
+//     text-align: center;
+//     opacity: 0;
+//     transition: opacity 0.3s;
+//   }
+  
+//   .image-container:hover .text {
+//     opacity: 1;
+//   }
+  
