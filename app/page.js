@@ -65,7 +65,7 @@ export default async function Home() {
             </div>
         </main> 
 
-        <main style={{ ...hideStyles.hideScrollbar, ...hideStyles.hideScrollbarWebkit }} className="h-screen w-screen max-w-screen p-4 overflow-x-auto snap-x snap-mandatory scroll-smooth"> 
+        <main style={{ ...hideStyles.hideScrollbar, ...hideStyles.hideScrollbarWebkit }} className="h-screen w-screen max-w-screen p-4 overflow-x-auto snap-x overflow-hidden snap-mandatory scroll-smooth"> 
             <div className='flex space-x-1'>
             {
                 verticals.length > 0 ? (verticals.map((product,productIndex)=>{
