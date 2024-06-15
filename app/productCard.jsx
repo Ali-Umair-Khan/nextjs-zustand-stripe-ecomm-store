@@ -33,7 +33,7 @@ export default function ProductCard({product,text}){
          h-screen bg-black flex items-center justify-center text-2xl  max-w-[100vw] rounded 
         overflow-auto shadow-lg hover:shadow-sm`}>
                 <img src={images[0]} alt={description} className='h-full w-full object-center object-scale-down aspect-square'/>
-                <div className={`flex flex-col justify-between items-center gap-1 p-2 text-sm m-0 shadow-xl
+                <div className={`flex flex-col justify-between items-center gap-1 p-2 text-sm m-1 shadow-xl
                  shadow-gray-500 rounded-sm absolute top-4 left-[25%] -translate-x-1/2 + ${text ? 'bg-transparent sm:bg-slate-200 text-white md:text-black sm:text-black': 'bg-slate-300 text-black'}`} title='scroll left to see more products'>
                     <h1 className='text-xl'>{description}</h1>
                     <p onClick={onProductClick} className='text-xl cursor-pointer font-italic underline'> click to get it in  ${cost/100}</p>
