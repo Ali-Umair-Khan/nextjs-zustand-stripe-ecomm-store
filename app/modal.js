@@ -55,7 +55,7 @@ export default function Modal() {
                             <div className='absolute bottom-0 left-1/2 bg-slate-400 h-[1px] mt-4 w-2/3 -translate-x-1/2'></div>
                         </div>
                         <div className='p-4 flex flex-col justify-between items-center gap-4'>
-                            {cartItems.length === 0 ? <p>Cart is empty</p> : (
+                            {cartItems.length === 0 ? <p className='text-2xl text-slate-800'>Cart is empty</p> : (
                                 <>  
                                 {cartItems.length > 0 && cartItems.map((cartItem,index)=> {
                                     const values = cartItem.name.split("-");

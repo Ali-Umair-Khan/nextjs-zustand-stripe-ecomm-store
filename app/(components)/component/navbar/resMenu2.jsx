@@ -49,6 +49,11 @@ const ResponsiveMenu = () => {
 
    };
 
+   const callMultipleFunction = () => {
+    handleMenuItemClick();
+    setOpenModal();
+   }
+
   // onChange={handleMenuToggle}
   // style={{ mask: 'url(#curved-mask)' }}
 
@@ -111,7 +116,7 @@ const ResponsiveMenu = () => {
                     </li>
                 
                     <li onClick={handleMenuItemClick}><a href={linkUrl} target="_blank" rel="noopener noreferrer" onClick={handleMenuItemClick}>Contact <FontAwesomeIcon icon={faAddressBook} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a></li>
-                    <div onClick={setOpenModal} className='relative cursor-pointer grid place-items-center'>
+                    <div onClick={callMultipleFunction} className='relative cursor-pointer grid place-items-center'>
                         {cartItems.length > 0 && (
                             <div className={`absolute top-2 aspect-square pointer-events-none h-5 sm:h-6 grid place-items-center text-slate-500 
                             rounded-full right-0 -translate-y-1/2 translate-x-1/2`}>
