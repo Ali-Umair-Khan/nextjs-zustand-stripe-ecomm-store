@@ -81,10 +81,10 @@ const ResponsiveMenu = () => {
                           <a onClick={handleMenuItemClick}>Who I am</a>
                       </Link>
                     </li> */}
-                    <li onClick={handleMenuItemClick} className='navbar__menu-item'>
+                    <li  className='navbar__menu-item'>
                       <ReactUseLink to='work'  smooth={true} duration={1000}>
                           <a onClick={handleMenuItemClick}>Furniture Types<FontAwesomeIcon icon={faHurricane} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a>
-                          <div className='dropdown-menu'>
+                          <div className='dropdown-menu' onClick={handleMenuItemClick}>
                             <p>Accessories</p>
                             <p>Bedroom</p>
                             <p>Dinning Room</p>
