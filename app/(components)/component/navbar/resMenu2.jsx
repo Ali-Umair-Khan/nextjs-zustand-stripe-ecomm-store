@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 // import Link from 'next/link';
-import { Link } from "react-scroll";
-// import {Link as NextLink} from 'next/link';
+import { Link as ReactUseLink } from "react-scroll";
+import Link from 'next/link';
 import './style4.scss';
 // import './navbar.scss';
 import React, {useState, useRef} from 'react';
@@ -65,7 +65,7 @@ const ResponsiveMenu = () => {
                 <div className='navbar__left' onClick={handleMenuItemClick}>
                     <div className='navbar__left-image'>
                        {/* <h1 onClick={() => { router.push('/')}} className='cursor-pointer'>CRETIS</h1> */}
-                        <h1 className='cursor-pointer'>CRETIS</h1>
+                      <Link href={`/`}><h1 className='cursor-pointer'>CRETIS</h1></Link> 
                     </div>
                 </div>
                 {/* <li onClick={handleMenuItemClick} className='navbar__logo'><Link href='/'><img src='ak.gif' alt="" /></Link></li> */}
@@ -77,7 +77,7 @@ const ResponsiveMenu = () => {
                       </Link>
                     </li> */}
                     <li onClick={handleMenuItemClick} className='navbar__menu-item'>
-                      <Link to='work'  smooth={true} duration={1000}>
+                      <ReactUseLink to='work'  smooth={true} duration={1000}>
                           <a onClick={handleMenuItemClick}>Furniture Types<FontAwesomeIcon icon={faHurricane} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a>
                           <div className='dropdown-menu'>
                             <p>Accessories</p>
@@ -85,10 +85,10 @@ const ResponsiveMenu = () => {
                             <p>Dinning Room</p>
                             <p>Others</p>
                           </div>
-                      </Link>
+                      </ReactUseLink>
                     </li>
                     <li onClick={handleMenuItemClick} className='navbar__menu-item'>
-                      <Link to='services'  smooth={true} duration={1000}>
+                      <ReactUseLink to='services'  smooth={true} duration={1000}>
                           <a onClick={handleMenuItemClick}>Brands <FontAwesomeIcon icon={faWrench} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a>
                           <div className='dropdown-menu'>
                             <p>SEBE</p>
@@ -96,10 +96,10 @@ const ResponsiveMenu = () => {
                             <p>CHAIROY</p>
                             <p>BUSSARAT</p>
                           </div>
-                      </Link>
+                      </ReactUseLink>
                     </li>
                     <li onClick={handleMenuItemClick} className='navbar__menu-item'>
-                      <Link to='charging' smooth={true} duration={1000}>
+                      <ReactUseLink to='charging' smooth={true} duration={1000}>
                           <a onClick={handleMenuItemClick}>Specials <FontAwesomeIcon icon={faDollarSign} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a>
                           <div className='dropdown-menu'>
                             <p>Queen Bedroom Sets | $1200</p>
@@ -107,7 +107,7 @@ const ResponsiveMenu = () => {
                             <p>Sectionals | $1300</p>
                             <p>Sofa & Ottomans Sets | $1400</p>
                           </div>
-                      </Link>
+                      </ReactUseLink>
                     </li>
                 
                     <li onClick={handleMenuItemClick}><a href={linkUrl} target="_blank" rel="noopener noreferrer" onClick={handleMenuItemClick}>Contact <FontAwesomeIcon icon={faAddressBook} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a></li>
