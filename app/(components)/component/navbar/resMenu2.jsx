@@ -5,7 +5,7 @@ import { Link as ReactUseLink } from "react-scroll";
 import Link from 'next/link';
 import './style4.scss';
 // import './navbar.scss';
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { useClickAway } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import UseStore from '../../../(store)/store';
@@ -25,6 +25,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const ResponsiveMenu = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        setIsMobile(checkMobile);
+      }, []);
     const cartItems = UseStore(state=>state.cart);
     const openModal = UseStore(state=>state.openModal);
     const setOpenModal = UseStore(state=>state.setOpenModal);
@@ -40,7 +46,9 @@ const ResponsiveMenu = () => {
 
   const handleMenuItemClick = () => {
     // setTimeout(() => {
-      setMenuOpen(false);
+        if(!isMobile){
+            setMenuOpen(false);
+        }
     // }, 50); // Adjust the delay time as needed
 
   //   Events.scrollEvent.register('end', () => {
@@ -107,10 +115,10 @@ const ResponsiveMenu = () => {
                       <ReactUseLink to='charging' smooth={true} duration={1000}>
                           <a onClick={handleMenuItemClick}>Specials <FontAwesomeIcon icon={faDollarSign} style={{ fontSize: '1.6rem', marginLeft:'0.5rem'}} /></a>
                           <div className='dropdown-menu'>
-                            <p>Queen Bedroom Sets | $1200</p>
-                            <p>Mattresses | $1000</p>
-                            <p>Sectionals | $1300</p>
-                            <p>Sofa & Ottomans Sets | $1400</p>
+                            <p>Queen Bed set-$1200</p>
+                            <p>Mattresses-$1000</p>
+                            <p>Sectionals-$1300</p>
+                            <p>Sofa&Ottomans-$1400</p>
                           </div>
                       </ReactUseLink>
                     </li>
