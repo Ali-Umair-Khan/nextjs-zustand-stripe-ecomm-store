@@ -29,7 +29,7 @@ const ResponsiveMenu = () => {
     const openModal = UseStore(state=>state.openModal);
     const setOpenModal = UseStore(state=>state.setOpenModal);
 
-    const router = useRouter();
+    // const router = useRouter();
   const linkUrl = 'https://calendly.com/aliumairkhan/30min';
 
   const [menuOpen, setMenuOpen] = useState(false);
